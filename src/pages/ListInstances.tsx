@@ -181,7 +181,8 @@ const MyInstancesPage = () => {
                                 <Dragger accept={".csv"}
                                          action={configService.api_url + "/files/upload"}
                                          headers={{Authorization: "Bearer " + authService.hasCredentials()}}
-                                         onChange={onChangeDragger}>
+                                         onChange={onChangeDragger}
+                                >
                                     <p className="ant-upload-drag-icon">
                                         <InboxOutlined/>
                                     </p>

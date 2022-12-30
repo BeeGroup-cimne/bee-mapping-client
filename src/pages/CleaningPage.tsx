@@ -1,9 +1,9 @@
 import React, {Fragment, useState} from "react";
 import {ClearOutlined, FileAddOutlined, InfoOutlined, SaveOutlined} from '@ant-design/icons';
-import {Button, Col, Row, Steps} from 'antd';
+import {Button, Col, Divider, Row, Steps} from 'antd';
 import store from "../store";
 import {setNextStep, setPreviousStep} from "../actions/cleaning_actions";
-import UploadFile from "../parts/UploadFile";
+import CreateDataset from "../parts/CreateDataset";
 
 const {Step} = Steps;
 
@@ -34,9 +34,9 @@ const CleaningPage = () => {
                         <Step title="Cleaning" icon={<ClearOutlined/>}/>
                         <Step title="Store" icon={<SaveOutlined/>}/>
                     </Steps>
-
+                    <Divider/>
                     <div className={"container"}>
-                        <UploadFile isVisible={currentIndex === 0}/>
+                        <CreateDataset isVisible={currentIndex === 0}/>
                     </div>
                     <Button onClick={nextStep}>Next</Button>
                     <Button onClick={previousStep}>Back</Button>
